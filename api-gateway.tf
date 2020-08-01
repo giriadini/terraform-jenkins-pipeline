@@ -33,6 +33,6 @@ output "base_url" {
 
 resource "null_resource" "echo_result" {
   provisioner "local-exec" {
-    command = "sh curl aws_api_gateway_deployment.appdeployment.invoke_url > completed.txt"
+    command = "curl aws_api_gateway_deployment.appdeployment.invoke_url > completed.txt"
   }
 }
