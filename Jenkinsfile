@@ -51,7 +51,6 @@ try {
         ]]) {
           ansiColor('xterm') {
             sh 'terraform apply -auto-approve'
-            sh curl 'terraform output base_url'
           }
         }
       }
