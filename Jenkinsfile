@@ -51,6 +51,7 @@ try {
         ]]) {
           ansiColor('xterm') {
             sh 'terraform apply -auto-approve'
+            curl 'terraform output base_url' >> out.txt
           }
         }
       }
@@ -87,7 +88,7 @@ try {
         }
       }
     }
-    
+
   currentBuild.result = 'SUCCESS'
 }
 catch (org.jenkinsci.plugins.workflow.steps.FlowInterruptedException flowError) {
