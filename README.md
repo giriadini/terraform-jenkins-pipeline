@@ -11,4 +11,5 @@ Resources required for the serverless lambda application are deployed using terr
 6.  After appling sucessfully the terraform configuration, all the resources will be displayed in respective consoles in AWS.
 7.  Testing of the app is performed by doing curl on the final output url.
 
-
+For complete pipeline:
+https://github.com/giriadini/terraform_lambda_api_app/find/master
