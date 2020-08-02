@@ -30,4 +30,3 @@ resource "aws_lambda_permission" "lambda_permission" {
 output "base_url" {
   value = aws_api_gateway_deployment.appdeployment.invoke_url
 }
-

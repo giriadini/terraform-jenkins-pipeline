@@ -6,11 +6,4 @@ resource "aws_lambda_function" "test_lambda" {
   role          = aws_iam_role.iam_for_lambda_tf.arn
   handler       = "index.handler"
   runtime       = "nodejs12.x"
-
-  provisioner "local-exec" {
-    command = "curl ${aws_api_gateway_deployment.appdeployment.invoke_url}"
-
-
-  }
-
 }
