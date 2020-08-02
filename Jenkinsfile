@@ -53,7 +53,7 @@ try {
             sh 'terraform apply -auto-approve'
             sh  'terraform output base_url >> output.txt'
             sh  'cat output.txt'
-            sh  'curl $(cat output.txt)'
+            sh  'curl -s $(cat output.txt)'
           }
         }
       }
