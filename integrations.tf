@@ -1,4 +1,5 @@
 
+/* Incoming request are handled by MyDemoResource ,aws_api_gateway_method */
 resource "aws_api_gateway_resource" "MyDemoResource" {
   rest_api_id = aws_api_gateway_rest_api.MyDemoAPI.id
   parent_id   = aws_api_gateway_rest_api.MyDemoAPI.root_resource_id
@@ -13,6 +14,7 @@ resource "aws_api_gateway_method" "MyDemoMethod" {
   authorization = "NONE"
 }
 
+/* Routing incoming requests */
 resource "aws_api_gateway_integration" "lambda" {
   rest_api_id = aws_api_gateway_rest_api.MyDemoAPI.id
   resource_id = aws_api_gateway_method.MyDemoMethod.resource_id

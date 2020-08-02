@@ -3,7 +3,7 @@ resource "aws_api_gateway_rest_api" "MyDemoAPI" {
   description = "This is an sample api"
 }
 
-
+/* deployment in api gateway*/
 resource "aws_api_gateway_deployment" "appdeployment" {
   depends_on = [
     aws_api_gateway_integration.lambda,

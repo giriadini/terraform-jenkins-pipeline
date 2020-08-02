@@ -75,7 +75,7 @@ try {
       }
     }
   
-
+    // Run terraform destroy
     stage('destroy') {
       node {
         withCredentials([[

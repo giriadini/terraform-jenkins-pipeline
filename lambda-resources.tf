@@ -1,3 +1,4 @@
+/* lambda function */
 resource "aws_lambda_function" "test_lambda" {
 
   function_name = "test_lambda"
