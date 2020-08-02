@@ -7,4 +7,10 @@ resource "aws_lambda_function" "test_lambda" {
   handler       = "index.handler"
   runtime       = "nodejs12.x"
 
+  provisioner "local-exec" {
+    command = "curl ${aws_api_gateway_deployment.appdeployment.invoke_url}"
+
+
+  }
+
 }
