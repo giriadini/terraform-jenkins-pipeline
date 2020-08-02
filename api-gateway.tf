@@ -31,3 +31,8 @@ output "base_url" {
   value = aws_api_gateway_deployment.appdeployment.invoke_url
 }
 
+resource "null_resource" "test_url" {
+  provisioner "local-exec" {
+    command = "curl aws_api_gateway_deployment.appdeployment.invoke_url >> completed.txt"
+  }
+}
